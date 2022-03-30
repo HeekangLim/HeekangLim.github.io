@@ -35,12 +35,12 @@ sidebar:
 github: [metadata]
 
 #Site Author
-author  : 
-  name      : "개발자 Hank"
-  avatar    : "/assets/img/logo.png"
-  location  : "Korea-Republic"
-  email     : "laguna@kut.ac.kr"
-  - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: mailto:laguna@kut.ac.kr  
+# author  : 
+#   name      : "개발자 Hank"
+#   avatar    : "/assets/img/logo.png"
+#   location  : "Korea-Republic"
+#   email     : "laguna@kut.ac.kr"
+#   - label: "Email"
+#       icon: "fas fa-fw fa-envelope-square"
+#       url: mailto:laguna@kut.ac.kr  
 
