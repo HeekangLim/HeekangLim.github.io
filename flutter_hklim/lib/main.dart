@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hklim/screens/screen_bloc.dart';
+import 'package:flutter_hklim/screens/screen_getx.dart';
+import 'package:flutter_hklim/screens/screen_provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -99,11 +101,14 @@ class _MyHomePageState extends State<MyHomePage> {
             }
             , child: const Text('BLoC Test')),
             OutlinedButton(onPressed: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context) => ScreenBloc()),
+                Navigator.push(context, MaterialPageRoute(builder: (context) => ScreenProvider()),
               );
             }
                 , child: const Text('Provider Test')),
-            OutlinedButton(onPressed: (){}
+            OutlinedButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => ScreenGetX()),
+                );
+            }
                 , child: const Text('getX Test')),
           ],
         ),

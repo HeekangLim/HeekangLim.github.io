@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -17,6 +16,9 @@ class ScreenBloc extends StatelessWidget {
           home : Scaffold(
             appBar: AppBar (
               title: Text('ScreenBloc'),
+              leading: BackButton(
+                onPressed: () => Navigator.pop(context)
+              ),
             ),
             body: SafeArea(
               child :Counter()
@@ -38,12 +40,8 @@ class BlocCount extends Bloc<EventCnt, int>{
   }
 }
 
-class Counter extends StatefulWidget {
-  @override
-  _CounterState createState() => _CounterState();
-}
+class Counter extends StatelessWidget {
 
-class _CounterState extends State<Counter> {
   @override
   Widget build(BuildContext context) {
     final _counterBloc = BlocProvider.of<BlocCount>(context);
