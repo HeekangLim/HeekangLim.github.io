@@ -1,11 +1,7 @@
-import 'dart:async';
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_hklim/screens/screen_temp.dart';
 import 'package:get/get.dart';
-import 'package:provider/provider.dart';
 
 class ScreenGetX extends StatelessWidget {
 
@@ -14,17 +10,33 @@ class ScreenGetX extends StatelessWidget {
     // Controller 등록
     Get.put(GetXCounter());
 
-    return MaterialApp(
-        title : 'Counter app using getX',
-        home : Scaffold(
-          appBar: AppBar (
-            title: Text('ScreenGetX'),
-          ),
-          body: SafeArea(
-            child : Counter()
-          )
+    // return MaterialApp(
+    return GetMaterialApp(  // getX 라우팅을 위해 GetMaterialApp 으로
+      getPages: [
+        GetPage(name: '/temp1', page: ()=> ScreenTempNext()),
+        GetPage(name: '/temp2', page: ()=> ScreenTemp2()),
+        GetPage(name: '/param/:param', page: ()=> ScreenParam() ),
+      ],
+      title : 'Counter app using getX',
+      home : Scaffold(
+        appBar: AppBar (
+          title: const Text('ScreenGetX'), // 변화 없는 위젯이라 const
         ),
-      );
+        body: SafeArea(
+          child : Column(
+            children: [
+              Counter(),
+              const Text('----------------------------------------'),
+              OutlinedButton(
+                  onPressed: () => Get.to(ScreenTempNext()),
+                  child : const Text('스크린 이동'),
+              ),
+            ],
+          )
+          // child : Counter()
+        )
+      ),
+    );
   }
 }
 

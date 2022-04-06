@@ -8,7 +8,7 @@ layout: default
 
 해당 페이지에서는 GetX 라이브러리를 이용한 방법을 다룹니다.
 
-## GetX 패턴 xmrwld
+## GetX 패턴 특장점
 
 > BLoC 와 Provider에 비해 가볍고 다루기 쉽게 되어 있다.
 > 

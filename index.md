@@ -18,6 +18,8 @@ Provider 링크 : [Provider](./flutter_state_pattern_provider.html)
 
 GetX 링크 : [GetX](./flutter_state_pattern_getx.html)
 
-### Flutter 라우트 관리
+##### 목표가 GetX 를 사용한 어플리케이션 개발에 있기 때문에 GetX 기능 정리를 먼저 다루겠습니다.
 
-GetX 패턴 : 
+### GetX 기능 정리
+
+GetX 라우트 관리 : [GetX 라우트 관리](./flutter_state_route_getx.html)
